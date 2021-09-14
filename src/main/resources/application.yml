@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    vault:
+      authentication: approle
+      app-role:
+        secret-id: secretId
+        role-id: roleId
+      host: vaultHost
+      port: 443
+      ssl:
+        trust-store: file:/usr/share/trustStore.jks
+      fail-fast: true
+  config:
+    import: vault://
