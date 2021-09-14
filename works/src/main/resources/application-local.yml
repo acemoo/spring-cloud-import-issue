@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    vault:
+      app-role:
+        secret-id: localSecretId
+      host: localhost
+      port: 443
+      ssl:
+        trust-store: null
+  config:
+    import: vault://
